@@ -7,11 +7,32 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import Pinecone
 from langchain.llms import OpenAI
-
+import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
-
 import os
+
+# Sidebar contents
+with st.sidebar:
+    st.title('💬 LLM Chat App on Procurement Manuals and Amendment Compilations in GFR...')
+    st.markdown('''
+    ## About
+    This GPT is designed specifically to assist with understanding procurement rules and identifying deviations in proposals or tender documents related to procurement.
+    It uses following documents as a knowledge base to provide detailed insights and comparisons.
+    This includes analyzing and summarizing content from manuals and amendments related to procurement guidelines, 
+    as well as identifying compliance or discrepancies in tender documents according to the established rules and regulations. 
+    This GPT/ChatBot aims to support users in ensuring that procurement activities are carried out in accordance with the legal and regulatory frameworks.
+
+
+    - [Consultancy](https://doe.gov.in/files/manuals_documents/Manual_for_Procurement_of_Consultancy_%26_Other_Services_Updated%20June%2C%202022_1.pdf)
+    - [Works](https://www.eicindia.gov.in/WebApp1/resources/PDF/PPM/PPM%2000001.pdf)
+    - [Goods](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/04/2023042694.pdf)
+    - [Amendments Compilation GFR](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
+    
+ 
+    ''')
+    #add_vertical_space(5)
+    st.write('Made by LBSNAA for learning purpose](https://www.lbsnaa.gov.in/)')
 
 def read_doc(directory):
     file_loader=PyPDFDirectoryLoader(directory)
@@ -31,7 +52,6 @@ documents=chunk_data(docs=doc)
 
 ## Embedding Technique Of OPENAI
 embeddings=OpenAIEmbeddings(api_key=os.environ['OPENAI_API_KEY'])
-embeddings
 
 # vectors=embeddings.embed_query("How are you?")
 # len(vectors)
@@ -61,7 +81,7 @@ def retrieve_answers(query):
     print(doc_search)
     response=chain.run(input_documents=doc_search,question=query)
     return response
-import streamlit as st
+
 # our_query = "Please tell me some of the rules mentioned in GFR in bullet points"
 # answer= retrieve_answers(our_query)
 # print(answer)
