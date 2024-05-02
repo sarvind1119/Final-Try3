@@ -24,11 +24,12 @@ with st.sidebar:
     This GPT/ChatBot aims to support users in ensuring that procurement activities are carried out in accordance with the legal and regulatory frameworks.
 
 
-    - [Consultancy](https://doe.gov.in/files/manuals_documents/Manual_for_Procurement_of_Consultancy_%26_Other_Services_Updated%20June%2C%202022_1.pdf)
-    - [Works](https://www.eicindia.gov.in/WebApp1/resources/PDF/PPM/PPM%2000001.pdf)
-    - [Goods](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/04/2023042694.pdf)
-    - [Amendments Compilation GFR](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
-    
+    - [Manual for Procurement of Consultancy & Other Services](https://doe.gov.in/files/manuals_documents/Manual_for_Procurement_of_Consultancy_%26_Other_Services_Updated%20June%2C%202022_1.pdf)
+    - [Manual for Procurement of Works](https://www.eicindia.gov.in/WebApp1/resources/PDF/PPM/PPM%2000001.pdf)
+    - [Procurement Manual of Goods](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/04/2023042694.pdf)
+    - [Compilation of amendments in GFRs, 2017 upto 31.07.2023](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
+
+    [Compilation of amendments in GFRs, 2017 upto 31.07.2023](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
  
     ''')
     #add_vertical_space(5)
