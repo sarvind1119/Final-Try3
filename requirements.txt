@@ -9,4 +9,4 @@ numpy
 python-dotenv
 sentence_transformers
 streamlit
-sentence_transformers
+langchain_pinecone
