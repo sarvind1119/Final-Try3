@@ -29,7 +29,7 @@ with st.sidebar:
     - [Procurement Manual of Goods](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/04/2023042694.pdf)
     - [Compilation of amendments in GFRs, 2017 upto 31.07.2023](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
 
-    [Compilation of amendments in GFRs, 2017 upto 31.07.2023](https://cdnbbsr.s3waas.gov.in/s316026d60ff9b54410b3435b403afd226/uploads/2023/08/20230830383438708.pdf)
+    [Documents Repository](https://drive.google.com/drive/folders/1M4nltzU9T7_pcogUykQWG6NiU4qWjzf8?usp=drive_link)
  
     ''')
     #add_vertical_space(5)
