@@ -65,7 +65,7 @@ import streamlit as st
 # our_query = "Please tell me some of the rules mentioned in GFR in bullet points"
 # answer= retrieve_answers(our_query)
 # print(answer)
-st.title("Question Answering App")
+st.title("Ask your questions about Procurement manual of Work or Goods or Consultancy or amendments in GFR(2017 to 2023)")
 
 user_question = st.text_input("Ask your question:")
 
