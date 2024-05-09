@@ -61,7 +61,7 @@ from langchain_pinecone import PineconeVectorStore
 
 vectorstore_from_docs = PineconeVectorStore.from_documents(
     documents,
-    index_name='askmydoc2',
+    index_name='procur2',
     embedding=embeddings
 )
 
