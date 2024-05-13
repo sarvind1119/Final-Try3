@@ -17,7 +17,7 @@ region = 'us-east-1'
 
 spec = ServerlessSpec(cloud=cloud, region=region)
 
-index_name = 'askmydoc2'
+index_name = 'procur2'
 
 # get openai api key from platform.openai.com
 OPENAI_API_KEY =  os.environ.get('OPENAI_API_KEY')
@@ -73,12 +73,32 @@ def ask_and_get_answer(vector_store, q, k=3):
     # If needed, return the answer object.
     return answer
 
+
 # completion llm
 llm = ChatOpenAI(
     openai_api_key=OPENAI_API_KEY,
     model_name='gpt-3.5-turbo',
     temperature=0.0
 )
+#-----------------adding the original function-------------
+
+## Cosine Similarity Retreive Results from VectorDB
+def retrieve_query(query,k=2):
+    matching_results=vectorstore_from_docs.similarity_search(query,k=k)
+    return matching_results
+
+from langchain.chains.question_answering import load_qa_chain
+from langchain import OpenAI
+
+llm=OpenAI(model_name="gpt-3.5-turbo-instruct",temperature=0.5)
+chain=load_qa_chain(llm,chain_type="stuff")
+
+## Search answers from VectorDB
+def retrieve_answers(query):
+    doc_search=retrieve_query(query)
+    print(doc_search)
+    response=chain.run(input_documents=doc_search,question=query)
+    return response
 
 from langchain.chains import RetrievalQAWithSourcesChain
 
